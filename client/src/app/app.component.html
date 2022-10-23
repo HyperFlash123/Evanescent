@@ -1,0 +1,22 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div>
+  <div id="loggingIn" style="display:block">
+    <form [formGroup]="loginForm" (ngSubmit)="authenticate(loginForm.value)">
+      <input placeholder="Username" formControlName="userName">
+      <input placeholder="Password" type="password" formControlName="passWord">
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </div>
+</div>
+<div id="authenticated" style="display:none">
+  <app-add-credentials></app-add-credentials>
+  <br>
+  <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+</div>
+<div id="notAuthenticated" style="display:none">
+  <p style="text-align:center">Please enter correct details!</p>  
+</div>
