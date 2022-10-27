@@ -13,6 +13,32 @@ cd evanescent
 ```
 
 This will get a copy of the project installed locally.
+
+### Steps to create your own database
+
+1. Download [sqlite3](https://www.sqlite.org/download.html)
+
+2. In your terminal or with your favorite IDE, create a table named Evanescent with the following columns: user, website, username, password, deleted. (All should be varchar(32)).
+```
+CREATE TABLE EVANESCENT
+(user varchar(32) default NULL, 
+website varchar(32) default NULL, 
+username varchar(32) default NULL, 
+password varchar(32) default NULL, 
+deleted varchar(32) default "False",
+PRIMARY KEY (username));
+
+INSERT INTO EVANESCENT
+VALUES (@user, @website, @username, @password, @deleted);
+```
+
+3. Insert values for a valid account in the table for any of the supported platforms.
+
+4. In the Database.java file, inside the connect() method, change the url to the full path of your database.
+
+Sample Database:
+![Sample Database](https://i.postimg.cc/HLStxQ9q/Screen-Shot-2022-10-26-at-9-49-05-PM.png)
+
 To run the server, cd into the `server` folder and run:
  
 ```
