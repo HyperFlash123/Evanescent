@@ -30,7 +30,7 @@ public class CredentialsController {
 
     @RequestMapping("/getCredentials/{unm}/{nm}")
     @CrossOrigin(origins = "http://localhost:4200")
-    public List<Credentials> goodCredentials(@PathVariable(value="unm") String unam, @PathVariable(value="nm") String nam ) {
+    public List<Credentials> getCredentials(@PathVariable(value="unm") String unam, @PathVariable(value="nm") String nam ) {
         if(nam.equals(null)) {
             return repository.findAll().stream().collect(Collectors.toList());
         }
@@ -55,6 +55,15 @@ public class CredentialsController {
         } else {
             return repository.findAll().stream().collect(Collectors.toList());
         }
+    }
+
+    @RequestMapping("/deleteCredentials/{username}/{password}/{website}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public boolean deleteCredentials(@PathVariable(value="username") String username, @PathVariable(value="password") String password, @PathVariable(value="website") String website) {
+        if (website.equalsIgnoreCase("Google")) {
+            Google.deleteAccount(username, password);
+        }
+        return true;
     }
 
     @PostMapping("/addCredentials")

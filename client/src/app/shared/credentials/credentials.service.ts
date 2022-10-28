@@ -13,6 +13,10 @@ export class CredentialsService {
     return this.http.get('http://localhost:8080/getCredentials/' + un + '/' + name);
   }
 
+  deleteCredential(username, password, website): Observable<any> {
+    return this.http.get('http://localhost:8080/deleteCredentials/' + username + '/' + password + '/' + website);
+  }
+
   addCredentials(credentialsElt: string): Observable<any> {
     return this.http.post<any>('http://localhost:8080/addCredentials', credentialsElt).pipe();
   }
