@@ -18,12 +18,8 @@ import org.openqa.selenium.By;
 
 public class Twitter {
 
-	public static void deleteAccount() {
-		
-		//Retrieving account data from database		
-		String username = "evanescenceEras";
-		String password ="GDPRregs1!";
-		
+	public static void deleteAccount(String username, String password) {
+
 		//declaring the specific executable for Chrome driver
 		System.setProperty("webdriver.chrome.driver", "/Users/yuhihakozaki/Desktop/workspace/SeleniumDBMS/chromedriver");
 		WebDriver driver = new ChromeDriver();

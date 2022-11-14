@@ -18,11 +18,7 @@ import org.openqa.selenium.By;
 
 public class Instagram {
 
-	public static void deleteAccount() {
-		
-		//Retrieving account data from database		
-		String username = "evanescenceerasure";
-		String password ="GDPRregs1!";
+	public static void deleteAccount(String username, String password) {
 		
 		//declaring the specific executable for Chrome driver
 		System.setProperty("webdriver.chrome.driver", "/Users/yuhihakozaki/Desktop/workspace/SeleniumDBMS/chromedriver");
