@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div style="text-align:center" class="header">
   <h1>
     {{ title }}
   </h1>
@@ -6,17 +6,27 @@
 <div>
   <div id="loggingIn" style="display:block">
     <form [formGroup]="loginForm" (ngSubmit)="authenticate(loginForm.value)">
-      <input placeholder="Username" formControlName="userName">
-      <input placeholder="Password" type="password" formControlName="passWord">
-      <button mat-raised-button color="primary" type="submit">Login</button>
+      <div class="row">
+        <div class="col-auto">
+          <input placeholder="Username" class="form-control" formControlName="userName">
+        </div>
+        <div class="col-auto">
+          <input placeholder="Password"  class="form-control" type="password" formControlName="passWord">
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+      </div>
     </form>
   </div>
 </div>
 <div id="authenticated" style="display:none">
   <app-add-credentials></app-add-credentials>
   <br>
-  <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+  <button class="btn btn-danger" style="position: absolute; bottom: 5%; right:20%;" (click)="logout()">Logout</button>
 </div>
-<div id="notAuthenticated" style="display:none">
-  <p style="text-align:center">Please enter correct details!</p>  
+<div id="notAuthenticated" style="display:none" class="toast" style="position: absolute; top: 0; right: 0;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="200" data-bs-autohide="true">
+  <div class="toast-body">
+    <p style="text-align:center"><strong class="mr-auto">Please enter correct details</strong></p>  
+  </div>
 </div>

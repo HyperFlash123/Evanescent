@@ -25,8 +25,7 @@ export class AddCredentialsComponent implements OnInit {
       userName: new FormControl(),
       passWord: new FormControl(),
       webSite: new FormControl(),
-      activeStatus: new FormControl(),
-      actionLink: new FormControl()
+      activeStatus: new FormControl()
     });
     this.viewsForm = new FormGroup({
       selectView: new FormControl({value: 'All'})
