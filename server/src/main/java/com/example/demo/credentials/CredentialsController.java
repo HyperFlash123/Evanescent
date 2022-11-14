@@ -63,6 +63,12 @@ public class CredentialsController {
         if (website.equalsIgnoreCase("Google")) {
             Google.deleteAccount(username, password);
         }
+        else if (website.equalsIgnoreCase("Twitter")) {
+            Twitter.deleteAccount(username, password);
+        }
+        else if (website.equalsIgnoreCase("Instagram")) {
+            Instagram.deleteAccount(username, password);
+        }
         return true;
     }
 
