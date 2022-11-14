@@ -59,5 +59,6 @@ public class Google {
 		driver.findElement(By.id("i6")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 		driver.findElement(By.id("i7")).click();
+        //driver.findElement(By.xpath("//*[@id=\"yDmH0d\"]/c-wiz/div/div[2]/div[2]/c-wiz/div/div[3]/form/div/div[3]/div/div/button")).click();
 	}
 }
