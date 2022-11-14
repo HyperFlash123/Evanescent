@@ -39,6 +39,8 @@ VALUES (@user, @website, @username, @password, @deleted);
 Sample Database:
 ![Sample Database](https://i.postimg.cc/HLStxQ9q/Screen-Shot-2022-10-26-at-9-49-05-PM.png)
 
+5. Download necessary dependencies for the Selenium automation: 
+
 To run the server, cd into the `server` folder and run:
  
 ```
