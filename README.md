@@ -34,12 +34,14 @@ VALUES (@user, @website, @username, @password, @deleted);
 
 3. Insert values for a valid account in the table for any of the supported platforms.
 
-4. In the Database.java file, inside the connect() method, change the url to the full path of your database.
+4. In the server/src/main/java/com/example/demo/credentials/CredentialsRepository.java file, inside the connect() method, change the url to the full path of your database.
 
 Sample Database:
 ![Sample Database](https://i.postimg.cc/HLStxQ9q/Screen-Shot-2022-10-26-at-9-49-05-PM.png)
 
 5. Download necessary dependencies for the Selenium automation: 
+[chromedriver.zip](https://github.com/HyperFlash123/Evanescent/files/9998628/chromedriver.zip)
+
 
 To run the server, cd into the `server` folder and run:
  
