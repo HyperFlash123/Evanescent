@@ -40,7 +40,8 @@ Sample Database:
 ![Sample Database](https://i.postimg.cc/HLStxQ9q/Screen-Shot-2022-10-26-at-9-49-05-PM.png)
 
 5. Download necessary dependencies for the Selenium automation: 
-[chromedriver.zip](https://github.com/HyperFlash123/Evanescent/files/9998628/chromedriver.zip)
+
+[chromedriver.zip](https://github.com/HyperFlash123/Evanescent/files/9998628/chromedriver.zip):
 
 Then, in server/src/main/java/com/example/demo/credentials, in each of the platform files, in System.setProperty within the deleteAccount method, change the path to where you saved the downloaded chromedriver executable.
 
