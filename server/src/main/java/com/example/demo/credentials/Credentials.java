@@ -13,23 +13,28 @@ import lombok.Setter;
 public class Credentials {
 
     @Id
-    @GeneratedValue
     private Long id;
+    private String user;
     private String userName;
+    private String cpwd;
     private String passWord;
     private String webSite;
     private String activeStatus;
     private String actionLink;
 
     public Credentials() {
-    }
 
-    public Credentials(String uname, String pwrd, String wSite, String aStatus, String aLink) {
+    }
+    
+    public Credentials(int i, String user, String uname, String pwrd, String cpwd, String wSite, String aStatus, String aLink) {
+        this.id = (long) i;
         this.userName = uname;
         this.passWord = pwrd;
         this.webSite = wSite;
         this.activeStatus = aStatus;
         this.actionLink = aLink;
+        this.user = user;
+        this.cpwd = cpwd;
     }
  
     @Override
@@ -41,6 +46,8 @@ public class Credentials {
                 ", wSite='" + webSite + '\'' +
                 ", aStatus='" + activeStatus + '\'' +
                 ", aLink='" + actionLink + '\'' +
+                ", user='" + user + '\'' +
+                ", cpwd='" + cpwd + '\'' +
                 '}';
     }
 }

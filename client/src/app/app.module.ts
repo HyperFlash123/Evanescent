@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CredentialsListComponent } from './credentials-list/credentials-list.component';
 import { AddCredentialsComponent } from './add-credentials/add-credentials.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CredentialsService } from './shared/credentials/credentials.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CredentialsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

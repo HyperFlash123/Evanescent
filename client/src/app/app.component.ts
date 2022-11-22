@@ -7,8 +7,7 @@ import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule } from '@angul
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [CredentialsService]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'Evanescent';
@@ -16,6 +15,7 @@ export class AppComponent implements OnInit {
   usersList :  Array<User> = [];
   loginForm : FormGroup;
   userName : string;
+  passWord : string;
 
   constructor(private credentialsService : CredentialsService) { }
 
@@ -35,8 +35,7 @@ export class AppComponent implements OnInit {
   authenticate(name : any) {
     console.log(name);
     this.userName = name.userName;
-    this.sendValue(this.userName);
-    
+    this.passWord = name.passWord;
     console.log(this.usersList);
     if(this.usersList.some(elt => elt.userName == name.userName && elt.passWord == name.passWord)) {
       const log1 = document.getElementById("loggingIn");
@@ -46,15 +45,13 @@ export class AppComponent implements OnInit {
       const log3 = document.getElementById("notAuthenticated");
       log3.style.display = 'none';
       this.loginForm.reset();
+      this.credentialsService.setUserName(name.userName);
+      this.credentialsService.setPassWord(name.passWord);
     } else {
       const log2 = document.getElementById("notAuthenticated");
       log2.style.display = 'block';
       this.loginForm.reset();
     }
-  }
-
-  sendValue(name : any){
-    this.credentialsService.setUserName(name);
   }
 
   logout() {

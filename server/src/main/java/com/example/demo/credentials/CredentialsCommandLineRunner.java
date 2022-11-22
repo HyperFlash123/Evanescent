@@ -16,7 +16,7 @@ public class CredentialsCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        repository.save(new Credentials("u1", "p1", "w1", "a1", "a2"));
+        repository.save(new Credentials(1, "e1","u1", "p1", "cp1", "w1", "a1", "a2"));
         userRepository.save(new User("u1","p1"));
         repository.findAll().forEach(System.out::println);
         userRepository.findAll().forEach(System.out::println);
