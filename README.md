@@ -41,7 +41,12 @@ Sample Database:
 
 5. Download necessary dependencies for the Selenium automation: 
 [chromedriver.zip](https://github.com/HyperFlash123/Evanescent/files/9998628/chromedriver.zip)
+
 Then, in server/src/main/java/com/example/demo/credentials, in each of the platform files, in System.setProperty within the deleteAccount method, change the path to where you saved the downloaded chromedriver executable.
+
+[Selenium package](https://www.selenium.dev/downloads/): 
+
+Go down to the Java selenium client and download the package. Then, in your imported project, add all of the jars in the Selenium package to the project. The method of doing this depends on the IDE and system, so please search how to import external jars.
 
 To run the server, cd into the `server` folder and run:
  
