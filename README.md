@@ -62,6 +62,11 @@ npm install && npm start
 ```
 
 The application can be accessed at http://localhost:4200/
+
+## Releases
+
+**For latest updates on new social media sites supported in Evanescent, visit** [LinkWithSelenium](https://github.com/HyperFlash123/Evanescent/tree/LinkWithSelenium)
+
 ## License
 
 Apache 2.0, see [LICENSE](LICENSE).
